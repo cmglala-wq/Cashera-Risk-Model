@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cashera Capital Financial Risk Assessment - Data-driven lending analysis for gig workers and self-employed individuals">
+    <title>Cashera Capital - Financial Risk Assessment WebReport</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">💰</span>
+                <span class="logo-text">Cashera Capital</span>
+            </div>
+            <div class="nav-links">
+                <a href="#overview">Overview</a>
+                <a href="#metrics">Metrics</a>
+                <a href="#projections">Projections</a>
+                <a href="#risk">Risk Assessment</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Financial Risk Assessment WebReport</h1>
+            <p class="hero-subtitle">Data-Driven Lending Analysis for Gig Workers & Self-Employed Individuals</p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-value">122,412</div>
+                    <div class="stat-label">Borrowers Analyzed</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">$4.48M</div>
+                    <div class="stat-label">Total Lending Capacity</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">21.83%</div>
+                    <div class="stat-label">Approval Rate</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">77.4</div>
+                    <div class="stat-label">CFRS Score</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Executive Summary -->
+    <section id="overview" class="section">
+        <div class="container">
+            <h2 class="section-title">Executive Summary</h2>
+
+            <div class="summary-card highlight-card">
+                <h3>Borrower Risk Profile</h3>
+                <p>This comprehensive assessment analyzes borrower creditworthiness using real cash flow data from <strong>122,412 analyzed user profiles</strong> within the Cashera Capital portfolio. The analysis eliminates reliance on traditional credit scores and focuses on actual behavioral patterns, income stability, and financial management capabilities.</p>
+
+                <div class="key-metrics">
+                    <div class="metric-box">
+                        <span class="metric-icon">✅</span>
+                        <div class="metric-content">
+                            <div class="metric-title">CFRS Score</div>
+                            <div class="metric-value">77.4</div>
+                            <div class="metric-desc">Tier 2 - Low-Moderate Risk</div>
+                        </div>
+                    </div>
+                    <div class="metric-box">
+                        <span class="metric-icon">💰</span>
+                        <div class="metric-content">
+                            <div class="metric-title">Monthly Income</div>
+                            <div class="metric-value">$3,500</div>
+                            <div class="metric-desc">$2,400 payroll + $1,100 gig</div>
+                        </div>
+                    </div>
+                    <div class="metric-box">
+                        <span class="metric-icon">📊</span>
+                        <div class="metric-content">
+                            <div class="metric-title">Debt Saturation</div>
+                            <div class="metric-value">8.0%</div>
+                            <div class="metric-desc">Well below 20% threshold</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-grid">
+                <div class="info-card">
+                    <h4>Approval Status</h4>
+                    <div class="status-badge approved">APPROVED</div>
+                    <p>Qualified for loans $300-$800 (immediate)</p>
+                </div>
+                <div class="info-card">
+                    <h4>Expected Default Rate</h4>
+                    <div class="status-value">8-10%</div>
+                    <p>Based on Tier 2 historical performance</p>
+                </div>
+                <div class="info-card">
+                    <h4>Red Flags</h4>
+                    <div class="status-badge clean">0 of 8</div>
+                    <p>No critical risk indicators detected</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Six Core Indicators -->
+    <section id="metrics" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Six Core Financial Health Indicators</h2>
+            <p class="section-intro">Each metric is calculated using real transaction data and weighted according to predictive power in determining repayment probability.</p>
+
+            <div class="indicators-grid">
+                <!-- Indicator 1 -->
+                <div class="indicator-card">
+                    <div class="indicator-header">
+                        <span class="indicator-number">1</span>
+                        <h3>Transaction History Score</h3>
+                    </div>
+                    <div class="indicator-body">
+                        <div class="indicator-weight">Weight: 25%</div>
+                        <div class="indicator-value">6 months</div>
+                        <div class="indicator-status good">Strong</div>
+                        <p><strong>Component:</strong> Transaction Velocity & Consistency</p>
+                        <p>Longer histories (6+ months) correlate with 28% lower default rates.</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Indicator 2 -->
+                <div class="indicator-card">
+                    <div class="indicator-header">
+                        <span class="indicator-number">2</span>
+                        <h3>Cash Flow Affordability</h3>
+                    </div>
+                    <div class="indicator-body">
+                        <div class="indicator-weight">Weight: 40%</div>
+                        <div class="indicator-value">75%</div>
+                        <div class="indicator-status good">Good</div>
+                        <p><strong>Component:</strong> Days Above Minimum Balance</p>
+                        <p>75% of days with sufficient balance for payment collection.</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 75%;"></div>
+                        </div>
+                        <div class="indicator-benchmark">
+                            <small>70-100%: ~5% default | 60-69%: ~9% default</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Indicator 3 -->
+                <div class="indicator-card">
+                    <div class="indicator-header">
+                        <span class="indicator-number">3</span>
+                        <h3>Debt Indicator</h3>
+                    </div>
+                    <div class="indicator-body">
+                        <div class="indicator-weight">Weight: 15%</div>
+                        <div class="indicator-value">Clean</div>
+                        <div class="indicator-status excellent">Excellent</div>
+                        <p><strong>Component:</strong> Behavior/Derogatory Events</p>
+                        <p>No stop payments, unpaid loans, or NSF events detected.</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill excellent" style="width: 100%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Indicator 4 -->
+                <div class="indicator-card">
+                    <div class="indicator-header">
+                        <span class="indicator-number">4</span>
+                        <h3>Employment Stability</h3>
+                    </div>
+                    <div class="indicator-body">
+                        <div class="indicator-weight">Weight: 20%</div>
+                        <div class="indicator-value">Stable</div>
+                        <div class="indicator-status good">Good</div>
+                        <p><strong>Component:</strong> Deposit Consistency (CV 0.28)</p>
+                        <p>Payroll: $2,400/mo | Gig: $1,100/mo</p>
+                        <div class="income-breakdown">
+                            <div class="income-bar payroll" style="width: 69%;" title="Payroll: 69%">Payroll</div>
+                            <div class="income-bar gig" style="width: 31%;" title="Gig: 31%">Gig</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Indicator 5 -->
+                <div class="indicator-card">
+                    <div class="indicator-header">
+                        <span class="indicator-number">5</span>
+                        <h3>Behavior Flags</h3>
+                    </div>
+                    <div class="indicator-body">
+                        <div class="indicator-weight">Weight: 15%</div>
+                        <div class="indicator-value">Low Risk</div>
+                        <div class="indicator-status good">Good</div>
+                        <p><strong>Component:</strong> Financial Behavior Patterns</p>
+                        <ul class="checklist">
+                            <li>✅ NSF Frequency: None</li>
+                            <li>✅ Overdrafts: Minimal (0.3/mo)</li>
+                            <li>✅ Payment Timing: Consistent</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Indicator 6 -->
+                <div class="indicator-card">
+                    <div class="indicator-header">
+                        <span class="indicator-number">6</span>
+                        <h3>Account Stability</h3>
+                    </div>
+                    <div class="indicator-body">
+                        <div class="indicator-weight">Component Score</div>
+                        <div class="indicator-value">Strong</div>
+                        <div class="indicator-status good">Good</div>
+                        <p><strong>Metrics:</strong> Overall Account Health</p>
+                        <ul class="stats-list">
+                            <li>Account Age: 24+ months</li>
+                            <li>Avg Balance: $1,850</li>
+                            <li>Positive Days: 82%</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CFRS Score Calculation -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">CFRS Risk Score Calculation</h2>
+
+            <div class="score-formula">
+                <h3>Formula</h3>
+                <div class="formula-box">
+                    CFRS = (CFA × 0.40) + (Transaction Velocity × 0.25) + (Employment Stability × 0.20) + (Behavior Score × 0.15)
+                </div>
+            </div>
+
+            <div class="score-components">
+                <div class="component-card">
+                    <div class="component-label">Cash Flow Affordability</div>
+                    <div class="component-calc">75 × 40% = <strong>30.0</strong></div>
+                </div>
+                <div class="component-card">
+                    <div class="component-label">Transaction Velocity</div>
+                    <div class="component-calc">78 × 25% = <strong>19.5</strong></div>
+                </div>
+                <div class="component-card">
+                    <div class="component-label">Employment Stability</div>
+                    <div class="component-calc">72 × 20% = <strong>14.4</strong></div>
+                </div>
+                <div class="component-card">
+                    <div class="component-label">Behavior Score</div>
+                    <div class="component-calc">90 × 15% = <strong>13.5</strong></div>
+                </div>
+            </div>
+
+            <div class="final-score">
+                <div class="score-circle" id="scoreCircle">
+                    <div class="score-number">77.4</div>
+                    <div class="score-label">CFRS Score</div>
+                </div>
+                <div class="score-details">
+                    <h3>Risk Assessment</h3>
+                    <div class="score-tier tier-2">Tier 2 - Low-Moderate Risk</div>
+                    <p><strong>Expected Default Rate:</strong> 8-10%</p>
+                    <p><strong>Approval Decision:</strong> <span class="badge-approved">APPROVED</span></p>
+                    <p>Borrower demonstrates strong financial health across all six core indicators. Clean payment history, stable income mix, and excellent account management justify immediate approval for loans up to $800.</p>
+                </div>
+            </div>
+
+            <!-- Portfolio Distribution Chart -->
+            <div class="chart-container">
+                <h3>Portfolio Score Distribution</h3>
+                <canvas id="scoreDistributionChart"></canvas>
+            </div>
+
+            <!-- Portfolio Table -->
+            <div class="table-responsive">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>CFRS Range</th>
+                            <th>Risk Tier</th>
+                            <th>Default Rate</th>
+                            <th>% of Portfolio</th>
+                            <th>Users</th>
+                            <th>Avg Monthly Income</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="tier-3-row">
+                            <td>70-100</td>
+                            <td><span class="tier-badge tier-3">Tier 3</span></td>
+                            <td>4-6%</td>
+                            <td>7.50%</td>
+                            <td>6,716</td>
+                            <td>$4,111</td>
+                        </tr>
+                        <tr class="tier-2-row current-borrower">
+                            <td>60-69</td>
+                            <td><span class="tier-badge tier-2">Tier 2 ⭐</span></td>
+                            <td>8-10%</td>
+                            <td>7.12%</td>
+                            <td>6,375</td>
+                            <td>$3,418</td>
+                        </tr>
+                        <tr class="tier-1-row">
+                            <td>50-59</td>
+                            <td><span class="tier-badge tier-1">Tier 1</span></td>
+                            <td>12-14%</td>
+                            <td>2.31%</td>
+                            <td>2,068</td>
+                            <td>$2,947</td>
+                        </tr>
+                        <tr class="denied-row">
+                            <td>&lt;50</td>
+                            <td><span class="tier-badge denied">Denied</span></td>
+                            <td>&gt;20%</td>
+                            <td>83.07%</td>
+                            <td>74,393</td>
+                            <td>$2,002</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="table-note">⭐ Current borrower profile (CFRS: 77.4, Income: $3,500)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Loan Projections -->
+    <section id="projections" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Loan Amount Projections & Recommendations</h2>
+            <p class="section-intro">Based on CFRS score of 77.4, monthly income of $3,500, and debt saturation of 8.0%, the following projections estimate performance across loan amounts from $300 to $1,500.</p>
+
+            <div class="projections-grid">
+                <!-- $300 Loan -->
+                <div class="projection-card approved">
+                    <div class="projection-header">
+                        <h3>$300 Loan</h3>
+                        <span class="decision-badge approved">✅ APPROVE</span>
+                    </div>
+                    <div class="projection-body">
+                        <div class="projection-details">
+                            <p><strong>Term:</strong> 30 days | <strong>APR:</strong> 42%</p>
+                            <p><strong>Biweekly Payment:</strong> $155.75</p>
+                        </div>
+                        <div class="projection-metrics">
+                            <div class="proj-metric">
+                                <span class="proj-label">Default Rate</span>
+                                <span class="proj-value">11.5%</span>
+                            </div>
+                            <div class="proj-metric">
+                                <span class="proj-label">Conversion Rate</span>
+                                <span class="proj-value">88.5%</span>
+                            </div>
+                            <div class="proj-metric">
+                                <span class="proj-label">Net Margin</span>
+                                <span class="proj-value">$18.20</span>
+                            </div>
+                        </div>
+                        <p class="projection-recommendation">Loan represents 8.6% of monthly income. Well within safe affordability range with debt burden remaining below 15%.</p>
+                    </div>
+                </div>
+
+                <!-- $500 Loan -->
+                <div class="projection-card approved">
+                    <div class="projection-header">
+                        <h3>$500 Loan</h3>
+                        <span class="decision-badge approved">✅ APPROVE</span>
+                    </div>
+                    <div class="projection-body">
+                        <div class="projection-details">
+                            <p><strong>Term:</strong> 45 days | <strong>APR:</strong> 38%</p>
+                            <p><strong>Biweekly Payment:</strong> $132.10</p>
+                        </div>
+                        <div class="projection-metrics">
+                            <div class="proj-metric">
+                                <span class="proj-label">Default Rate</span>
+                                <span class="proj-value">9.8%</span>
+                            </div>
+                            <div class="proj-metric">
+                                <span class="proj-label">Conversion Rate</span>
+                                <span class="proj-value">90.2%</span>
+                            </div>
+                            <div class="proj-metric">
+                                <span class="proj-label">Net Margin</span>
+                                <span class="proj-value">$32.50</span>
+                            </div>
+                        </div>
+                        <p class="projection-recommendation">Represents 14.3% of monthly income. Total debt burden ~12-13%, providing comfortable cushion below 20% threshold. <strong>Recommended starting amount.</strong></p>
+                    </div>
+                </div>
+
+                <!-- $800 Loan -->
+                <div class="projection-card approved">
+                    <div class="projection-header">
+                        <h3>$800 Loan</h3>
+                        <span class="decision-badge approved">✅ APPROVE</span>
+                    </div>
+                    <div class="projection-body">
+                        <div class="projection-details">
+                            <p><strong>Term:</strong> 60 days | <strong>APR:</strong> 35%</p>
+                            <p><strong>Biweekly Payment:</strong> $141.65</p>
+                        </div>
+                        <div class="projection-metrics">
+                            <div class="proj-metric">
+                                <span class="proj-label">Default Rate</span>
+                                <span class="proj-value">8.5%</span>
+                            </div>
+                            <div class="proj-metric">
+                                <span class="proj-label">Conversion Rate</span>
+                                <span class="proj-value">91.5%</span>
+                            </div>
+                            <div class="proj-metric">
+                                <span class="proj-label">Net Margin</span>
+                                <span class="proj-value">$51.80</span>
+                            </div>
+                        </div>
+                        <p class="projection-recommendation">Represents 22.9% of monthly income. Strong CFRS score and growing income trend justify approval. Total debt burden ~16%.</p>
+                    </div>
+                </div>
+
+                <!-- $1,000 Loan -->
+                <div class="projection-card conditional">
+                    <div class="projection-header">
+                        <h3>$1,000 Loan</h3>
+                        <span class="decision-badge conditional">⚠️ CONDITIONAL</span>
+                    </div>
+                    <div class="projection-body">
+                        <div class="projection-details">
+                            <p><strong>Term:</strong> 75 days | <strong>APR:</strong> 33%</p>
+                            <p><strong>Biweekly Payment:</strong> $141.20</p>
+                        </div>
+                        <div class="projection-metrics">
+                            <div class="proj-metric">
+                                <span class="proj-label">Default Rate</span>
+                                <span class="proj-value">7.8%</span>
+                            </div>
+                            <div class="proj-metric">
+                                <span class="proj-label">Conversion Rate</span>
+                                <span class="proj-value">92.2%</span>
+                            </div>
+                            <div class="proj-metric">
+                                <span class="proj-label">Net Margin</span>
+                                <span class="proj-value">$64.30</span>
+                            </div>
+                        </div>
+                        <p class="projection-recommendation"><strong>Conditions:</strong> Verify payroll continuity, confirm no new debt obligations. Debt burden would reach ~18%.</p>
+                    </div>
+                </div>
+
+                <!-- $1,200 Loan -->
+                <div class="projection-card conditional">
+                    <div class="projection-header">
+                        <h3>$1,200 Loan</h3>
+                        <span class="decision-badge conditional">⚠️ CONDITIONAL</span>
+                    </div>
+                    <div class="projection-body">
+                        <div class="projection-details">
+                            <p><strong>Term:</strong> 90 days | <strong>APR:</strong> 31%</p>
+                            <p><strong>Biweekly Payment:</strong> $139.85</p>
+                        </div>
+                        <div class="projection-metrics">
+                            <div class="proj-metric">
+                                <span class="proj-label">Default Rate</span>
+                                <span class="proj-value">7.2%</span>
+                            </div>
+                            <div class="proj-metric">
+                                <span class="proj-label">Conversion Rate</span>
+                                <span class="proj-value">92.8%</span>
+                            </div>
+                            <div class="proj-metric">
+                                <span class="proj-label">Net Margin</span>
+                                <span class="proj-value">$75.40</span>
+                            </div>
+                        </div>
+                        <p class="projection-recommendation"><strong>Enhanced Due Diligence Required:</strong> Represents 34.3% of income. Verify 90-day payroll continuity and gig income sustainability. Debt burden 19.5%.</p>
+                    </div>
+                </div>
+
+                <!-- $1,500 Loan -->
+                <div class="projection-card denied">
+                    <div class="projection-header">
+                        <h3>$1,500 Loan</h3>
+                        <span class="decision-badge denied">⛔ DENY</span>
+                    </div>
+                    <div class="projection-body">
+                        <div class="projection-details">
+                            <p><strong>Term:</strong> 105 days | <strong>APR:</strong> 30%</p>
+                            <p><strong>Biweekly Payment:</strong> $158.55</p>
+                        </div>
+                        <div class="projection-metrics">
+                            <div class="proj-metric">
+                                <span class="proj-label">Default Rate</span>
+                                <span class="proj-value">9.5%</span>
+                            </div>
+                            <div class="proj-metric">
+                                <span class="proj-label">Conversion Rate</span>
+                                <span class="proj-value">90.5%</span>
+                            </div>
+                            <div class="proj-metric">
+                                <span class="proj-label">Net Margin</span>
+                                <span class="proj-value">$62.80</span>
+                            </div>
+                        </div>
+                        <p class="projection-recommendation"><strong>Risk:</strong> Represents 42.9% of income, exceeding prudent thresholds. CFRS 77.4 below required 80+. Debt burden would exceed 20%. Consider $1,000 max.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comparison Chart -->
+            <div class="chart-container">
+                <h3>Loan Performance Comparison</h3>
+                <canvas id="loanComparisonChart"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <!-- Risk Assessment -->
+    <section id="risk" class="section">
+        <div class="container">
+            <h2 class="section-title">Risk Assessment & Red Flag Analysis</h2>
+
+            <div class="risk-summary">
+                <div class="risk-score-card">
+                    <div class="risk-icon">🛡️</div>
+                    <h3>Overall Risk Level</h3>
+                    <div class="risk-level low">LOW RISK</div>
+                    <p>0 of 8 critical red flags detected</p>
+                </div>
+            </div>
+
+            <h3>Red Flag Matrix</h3>
+            <div class="redflags-grid">
+                <div class="redflag-item passed">
+                    <span class="flag-icon">✅</span>
+                    <div class="flag-content">
+                        <h4>Transaction History</h4>
+                        <p>Required: ≥3 months | <strong>Current: 6 months</strong></p>
+                    </div>
+                </div>
+                <div class="redflag-item passed">
+                    <span class="flag-icon">✅</span>
+                    <div class="flag-content">
+                        <h4>Debt Saturation</h4>
+                        <p>Threshold: <20% | <strong>Current: 8.0%</strong></p>
+                    </div>
+                </div>
+                <div class="redflag-item passed">
+                    <span class="flag-icon">✅</span>
+                    <div class="flag-content">
+                        <h4>Stop Payments</h4>
+                        <p>Required: None | <strong>Current: None</strong></p>
+                    </div>
+                </div>
+                <div class="redflag-item passed">
+                    <span class="flag-icon">✅</span>
+                    <div class="flag-content">
+                        <h4>Payroll Income</h4>
+                        <p>Required: Recent | <strong>Current: 6 mo consistent</strong></p>
+                    </div>
+                </div>
+                <div class="redflag-item passed">
+                    <span class="flag-icon">✅</span>
+                    <div class="flag-content">
+                        <h4>Payroll Velocity</h4>
+                        <p>Required: Not declining | <strong>Current: +4.3% growth</strong></p>
+                    </div>
+                </div>
+                <div class="redflag-item passed">
+                    <span class="flag-icon">✅</span>
+                    <div class="flag-content">
+                        <h4>Loan Income Ratio</h4>
+                        <p>Threshold: Not increasing | <strong>Current: 0%</strong></p>
+                    </div>
+                </div>
+                <div class="redflag-item passed">
+                    <span class="flag-icon">✅</span>
+                    <div class="flag-content">
+                        <h4>Negative Balance</h4>
+                        <p>Threshold: <20% of month | <strong>Current: 8%</strong></p>
+                    </div>
+                </div>
+                <div class="redflag-item passed">
+                    <span class="flag-icon">✅</span>
+                    <div class="flag-content">
+                        <h4>NSF Events</h4>
+                        <p>Required: Minimal | <strong>Current: 0 in 90 days</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Strengths and Concerns -->
+            <div class="strengths-concerns">
+                <div class="strength-box">
+                    <h3>✅ Key Strengths</h3>
+                    <ul>
+                        <li>Strong transaction history (6 months)</li>
+                        <li>Excellent cash flow affordability (75%)</li>
+                        <li>Clean debt profile (8.0% saturation)</li>
+                        <li>Stable payroll income ($2,400/mo)</li>
+                        <li>Growing gig income (+15.8%)</li>
+                        <li>Healthy account stability (82% positive days)</li>
+                        <li>Low overdraft frequency (0.3/mo)</li>
+                        <li>Improving financial trajectory</li>
+                    </ul>
+                </div>
+                <div class="concern-box">
+                    <h3>⚠️ Areas to Monitor</h3>
+                    <ul>
+                        <li>Gig income variability (CV 0.35)</li>
+                        <li>Loans >$1,000 approach exposure limits</li>
+                        <li>CFRS 77.4 borderline for premium tiers</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final Recommendation -->
+    <section class="section final-recommendation">
+        <div class="container">
+            <h2 class="section-title">Final Lending Decision</h2>
+
+            <div class="recommendation-card">
+                <div class="recommendation-header">
+                    <h3>Overall Recommendation</h3>
+                    <span class="final-decision approved">APPROVED</span>
+                </div>
+
+                <div class="recommendation-body">
+                    <div class="recommendation-summary">
+                        <p><strong>Approved Loan Range:</strong> <span class="highlight">$300 - $800 (Immediate)</span></p>
+                        <p><strong>Conditional Approval:</strong> <span class="highlight">$1,000 - $1,200 (With Verification)</span></p>
+                        <p><strong>Not Recommended:</strong> <span class="highlight">$1,500+ (Exceeds Risk Thresholds)</span></p>
+                    </div>
+
+                    <div class="rationale">
+                        <h4>Rationale</h4>
+                        <p>Borrower demonstrates strong financial health across all six core indicators with CFRS score of 77.4 placing them in Tier 2 (low-moderate risk). Clean payment history, stable income mix, low debt saturation, and excellent account management justify immediate approval for loans up to $800.</p>
+                    </div>
+
+                    <div class="expected-performance">
+                        <h4>Expected Performance</h4>
+                        <ul>
+                            <li>Probability of Successful Repayment: <strong>90-92%</strong></li>
+                            <li>Expected Default Risk: <strong>8-10%</strong></li>
+                            <li>Portfolio Fit: <strong>Excellent</strong> (aligns with Tier 2 benchmarks)</li>
+                        </ul>
+                    </div>
+
+                    <div class="next-steps">
+                        <h4>Next Steps</h4>
+                        <ol>
+                            <li>Issue immediate approval notification for $500 loan (optimal starting amount)</li>
+                            <li>Provide borrower with option to select $300-$800 range based on need</li>
+                            <li>Set automated milestone for $1,000+ offer after 60 days of on-time payments</li>
+                            <li>Schedule quarterly CFRS re-evaluation to assess upgrade eligibility</li>
+                            <li>Enable direct deposit funding within 24-48 hours</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About Cashera Capital</h4>
+                    <p>Fast funding for gig workers and small businesses. When traditional banks say no, Cashera says yes.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Report Details</h4>
+                    <p>Generated: December 2024</p>
+                    <p>Model Version: CFRS v3.2</p>
+                    <p>Portfolio Data: 122,412 borrowers</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Apply Now</h4>
+                    <p>Ready to get funded in 24-48 hours?</p>
+                    <a href="https://apply.casheracapital.com" class="cta-button" target="_blank">Apply at Cashera Capital</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Cashera Capital | No credit score required. No red tape. No delays.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
