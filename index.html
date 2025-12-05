@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cashera Capital Risk Model V4.0 - Advanced Portfolio Risk Assessment Dashboard">
+    <title>Cashera Capital Risk Model V4.0 | Risk Assessment Dashboard</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo">
+                        <img src="assets/img/logo.svg" alt="Cashera Capital" style="width: 100%; height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="header-title">
+                        <h1>Cashera Capital Risk Model</h1>
+                        <p>Advanced Portfolio Risk Assessment Dashboard</p>
+                    </div>
+                </div>
+                <div class="report-info">
+                    <p><strong>Version:</strong> 4.0</p>
+                    <p><strong>Period:</strong> January - February 2024</p>
+                    <p><strong>Generated:</strong> <span id="report-date">February 9, 2024</span></p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <ul>
+                <li class="active" data-section="overview">Overview</li>
+                <li data-section="charts">Risk Charts</li>
+                <li data-section="metrics">Risk Metrics</li>
+                <li data-section="recommendations">Recommendations</li>
+                <li data-section="methodology">Methodology</li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <!-- Overview Section -->
+            <section id="overview">
+                <h2 class="section-title">Portfolio Overview</h2>
+
+                <!-- Dashboard Cards -->
+                <div class="dashboard-grid">
+                    <!-- Portfolio Value Card -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Portfolio Value</h3>
+                            <div class="card-icon" style="background: #e8f5e9; color: #4caf50;">
+                                =°
+                            </div>
+                        </div>
+                        <div class="card-value" id="portfolio-value">$1,112,000</div>
+                        <div class="card-label">Current Value</div>
+                        <div class="card-change change-positive" id="portfolio-change">
+                            ‘ +11.2%
+                        </div>
+                    </div>
+
+                    <!-- VaR 95% Card -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>VaR 95%</h3>
+                            <div class="card-icon" style="background: #fff3e0; color: #ff9800;">
+                                 
+                            </div>
+                        </div>
+                        <div class="card-value" id="var95-value">$56,000</div>
+                        <div class="card-label">1-Day Value at Risk (95% Confidence)</div>
+                        <div class="card-change">
+                            <span id="var95-percent">5.03%</span> of portfolio
+                        </div>
+                    </div>
+
+                    <!-- VaR 99% Card -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>VaR 99%</h3>
+                            <div class="card-icon" style="background: #ffebee; color: #f44336;">
+                                =¨
+                            </div>
+                        </div>
+                        <div class="card-value" id="var99-value">$80,000</div>
+                        <div class="card-label">1-Day Value at Risk (99% Confidence)</div>
+                        <div class="card-change">
+                            <span id="var99-percent">7.19%</span> of portfolio
+                        </div>
+                    </div>
+
+                    <!-- Sharpe Ratio Card -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Sharpe Ratio</h3>
+                            <div class="card-icon" style="background: #e3f2fd; color: #2196f3;">
+                                =Ê
+                            </div>
+                        </div>
+                        <div class="card-value" id="sharpe-value">1.00</div>
+                        <div class="card-label">Risk-Adjusted Return</div>
+                        <div class="card-change">
+                            Rating: <span id="sharpe-rating">Good</span>
+                        </div>
+                    </div>
+
+                    <!-- Volatility Card -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Volatility</h3>
+                            <div class="card-icon" style="background: #f3e5f5; color: #9c27b0;">
+                                =È
+                            </div>
+                        </div>
+                        <div class="card-value" id="volatility-value">26.0%</div>
+                        <div class="card-label">Annualized Volatility</div>
+                        <div class="card-change change-negative">
+                            Trend: <span id="volatility-trend">Increasing</span>
+                        </div>
+                    </div>
+
+                    <!-- Max Drawdown Card -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Max Drawdown</h3>
+                            <div class="card-icon" style="background: #ffebee; color: #f44336;">
+                                =É
+                            </div>
+                        </div>
+                        <div class="card-value" id="drawdown-value">-20%</div>
+                        <div class="card-label">Maximum Drawdown</div>
+                        <div class="card-change change-negative">
+                            Peak to Trough
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Charts Section -->
+            <section id="charts">
+                <h2 class="section-title">Risk Analysis Charts</h2>
+
+                <!-- Portfolio Value Chart -->
+                <div class="chart-container">
+                    <h3>Portfolio Value Over Time</h3>
+                    <div class="chart-wrapper">
+                        <canvas id="portfolioValueChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Value at Risk Chart -->
+                <div class="chart-container">
+                    <h3>Value at Risk (VaR) Evolution</h3>
+                    <div class="chart-wrapper">
+                        <canvas id="varChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Volatility Chart -->
+                <div class="chart-container">
+                    <h3>Portfolio Volatility</h3>
+                    <div class="chart-wrapper">
+                        <canvas id="volatilityChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Risk Metrics Radar Chart -->
+                <div class="chart-container">
+                    <h3>Current Risk Profile</h3>
+                    <div class="chart-wrapper">
+                        <canvas id="riskMetricsChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Beta Chart -->
+                <div class="chart-container">
+                    <h3>Beta (Market Sensitivity)</h3>
+                    <div class="chart-wrapper">
+                        <canvas id="betaChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Risk Scores Chart -->
+                <div class="chart-container">
+                    <h3>Risk Scores Over Time</h3>
+                    <div class="chart-wrapper">
+                        <canvas id="riskScoresChart"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Risk Metrics Section -->
+            <section id="metrics">
+                <h2 class="section-title">Detailed Risk Metrics</h2>
+
+                <div class="table-container">
+                    <h3>Key Risk Indicators</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Metric</th>
+                                <th>Current Value</th>
+                                <th>Average</th>
+                                <th>Risk Level</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>VaR 95%</strong></td>
+                                <td>$56,000 (5.03%)</td>
+                                <td>$48,800</td>
+                                <td><span class="risk-indicator risk-medium">Medium</span></td>
+                                <td>Maximum expected loss at 95% confidence level</td>
+                            </tr>
+                            <tr>
+                                <td><strong>VaR 99%</strong></td>
+                                <td>$80,000 (7.19%)</td>
+                                <td>$73,200</td>
+                                <td><span class="risk-indicator risk-medium">Medium</span></td>
+                                <td>Maximum expected loss at 99% confidence level</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Expected Shortfall</strong></td>
+                                <td>$87,000 (7.82%)</td>
+                                <td>$80,500</td>
+                                <td><span class="risk-indicator risk-medium">Medium</span></td>
+                                <td>Expected loss when VaR threshold is exceeded</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Volatility</strong></td>
+                                <td>26.0%</td>
+                                <td>20.5%</td>
+                                <td><span class="risk-indicator risk-high">High</span></td>
+                                <td>Annualized standard deviation of returns</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Beta</strong></td>
+                                <td>0.88</td>
+                                <td>0.99</td>
+                                <td><span class="risk-indicator risk-low">Low</span></td>
+                                <td>Systematic risk relative to market</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Sharpe Ratio</strong></td>
+                                <td>1.00</td>
+                                <td>1.11</td>
+                                <td><span class="risk-indicator risk-medium">Medium</span></td>
+                                <td>Risk-adjusted return metric</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Max Drawdown</strong></td>
+                                <td>-20%</td>
+                                <td>-13%</td>
+                                <td><span class="risk-indicator risk-high">High</span></td>
+                                <td>Largest peak-to-trough decline</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Liquidity Score</strong></td>
+                                <td>10.0</td>
+                                <td>9.1</td>
+                                <td><span class="risk-indicator risk-low">Low</span></td>
+                                <td>Ability to liquidate positions quickly</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Credit Risk Score</strong></td>
+                                <td>5.3</td>
+                                <td>6.5</td>
+                                <td><span class="risk-indicator risk-low">Low</span></td>
+                                <td>Counterparty default risk exposure</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Recommendations Section -->
+            <section id="recommendations">
+                <h2 class="section-title">Risk Management Recommendations</h2>
+
+                <div class="recommendations-grid">
+                    <!-- High Priority Recommendation -->
+                    <div class="recommendation-card priority-high">
+                        <div class="recommendation-header">
+                            <span class="recommendation-category">Drawdown Protection</span>
+                            <span class="priority-badge priority-high">High Priority</span>
+                        </div>
+                        <p>Maximum drawdown has reached -20%. Implement stop-loss strategies and consider hedging positions.</p>
+                        <div class="mt-1">
+                            <strong>Expected Impact:</strong> Limit further drawdown to -15%
+                        </div>
+                    </div>
+
+                    <!-- Medium Priority Recommendation 1 -->
+                    <div class="recommendation-card priority-medium">
+                        <div class="recommendation-header">
+                            <span class="recommendation-category">Volatility Management</span>
+                            <span class="priority-badge priority-medium">Medium Priority</span>
+                        </div>
+                        <p>Portfolio volatility has increased from 15% to 26% over the period. Consider rebalancing to reduce exposure to high-volatility assets.</p>
+                        <div class="mt-1">
+                            <strong>Expected Impact:</strong> Could reduce VaR by 10-15%
+                        </div>
+                    </div>
+
+                    <!-- Medium Priority Recommendation 2 -->
+                    <div class="recommendation-card priority-medium">
+                        <div class="recommendation-header">
+                            <span class="recommendation-category">Risk-Adjusted Returns</span>
+                            <span class="priority-badge priority-medium">Medium Priority</span>
+                        </div>
+                        <p>Sharpe Ratio has declined from 1.20 to 1.00. Review high-risk positions to improve risk-adjusted returns.</p>
+                        <div class="mt-1">
+                            <strong>Expected Impact:</strong> Target Sharpe Ratio above 1.15
+                        </div>
+                    </div>
+
+                    <!-- Low Priority Recommendation -->
+                    <div class="recommendation-card priority-low">
+                        <div class="recommendation-header">
+                            <span class="recommendation-category">Diversification</span>
+                            <span class="priority-badge priority-low">Low Priority</span>
+                        </div>
+                        <p>Beta has decreased to 0.88, indicating reduced market correlation. Current diversification appears adequate.</p>
+                        <div class="mt-1">
+                            <strong>Expected Impact:</strong> Maintain current strategy
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Methodology Section -->
+            <section id="methodology">
+                <h2 class="section-title">Risk Model Methodology</h2>
+
+                <div class="card mb-2">
+                    <h3>Model Overview</h3>
+                    <p>The Cashera Risk Model V4.0 integrates multiple risk assessment methodologies to provide comprehensive portfolio risk analysis. The model combines quantitative metrics with qualitative assessments to deliver actionable insights for risk management.</p>
+                </div>
+
+                <h3 class="mt-2 mb-1">Risk Model Components</h3>
+
+                <div class="components-grid">
+                    <div class="component-card">
+                        <div class="component-name">Value at Risk (VaR)</div>
+                        <div class="component-method">Historical Simulation with 250-day lookback</div>
+                        <p class="component-purpose">Quantifies potential losses at 95% and 99% confidence levels using historical return distributions. VaR represents the maximum expected loss under normal market conditions.</p>
+                    </div>
+
+                    <div class="component-card">
+                        <div class="component-name">Expected Shortfall (CVaR)</div>
+                        <div class="component-method">Conditional VaR calculation</div>
+                        <p class="component-purpose">Measures tail risk beyond VaR threshold by calculating the expected loss given that the VaR threshold has been exceeded. Also known as Conditional Value at Risk.</p>
+                    </div>
+
+                    <div class="component-card">
+                        <div class="component-name">Volatility Analysis</div>
+                        <div class="component-method">GARCH(1,1) model with rolling windows</div>
+                        <p class="component-purpose">Forecasts future volatility and identifies regime changes using Generalized Autoregressive Conditional Heteroskedasticity modeling to capture volatility clustering.</p>
+                    </div>
+
+                    <div class="component-card">
+                        <div class="component-name">Beta Calculation</div>
+                        <div class="component-method">Regression against market benchmark</div>
+                        <p class="component-purpose">Assesses systematic risk exposure by measuring portfolio sensitivity to market movements. Beta < 1 indicates lower volatility than the market.</p>
+                    </div>
+
+                    <div class="component-card">
+                        <div class="component-name">Sharpe Ratio</div>
+                        <div class="component-method">Excess return divided by standard deviation</div>
+                        <p class="component-purpose">Evaluates risk-adjusted performance by comparing portfolio returns to risk-free rate, normalized by volatility. Higher values indicate better risk-adjusted returns.</p>
+                    </div>
+
+                    <div class="component-card">
+                        <div class="component-name">Liquidity Risk</div>
+                        <div class="component-method">Bid-ask spread analysis and trading volume assessment</div>
+                        <p class="component-purpose">Measures ease of position liquidation by analyzing market depth, bid-ask spreads, and trading volumes. Higher scores indicate better liquidity.</p>
+                    </div>
+
+                    <div class="component-card">
+                        <div class="component-name">Credit Risk</div>
+                        <div class="component-method">Credit spread analysis and rating-based scoring</div>
+                        <p class="component-purpose">Assesses counterparty default risk through credit rating analysis, credit spreads, and probability of default calculations.</p>
+                    </div>
+
+                    <div class="component-card">
+                        <div class="component-name">Maximum Drawdown</div>
+                        <div class="component-method">Peak-to-trough analysis</div>
+                        <p class="component-purpose">Calculates the largest cumulative loss from peak to trough over the analysis period, providing insight into downside risk during adverse market conditions.</p>
+                    </div>
+                </div>
+
+                <!-- Disclaimer -->
+                <div class="disclaimer mt-2">
+                    <h4>  Disclaimer</h4>
+                    <p>This risk model is provided for informational purposes only. Past performance does not guarantee future results. All investments carry risk, including potential loss of principal. The risk metrics presented are based on historical data and statistical models which may not accurately predict future outcomes. Market conditions can change rapidly, and actual losses may exceed projected risk measures. Consult with qualified financial professionals before making investment decisions. Cashera Capital is not responsible for investment decisions made based on this report.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Cashera Capital. All rights reserved.</p>
+            <p>Risk Model Version 4.0 | Generated with advanced portfolio analytics</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/charts.js"></script>
+</body>
+</html>
