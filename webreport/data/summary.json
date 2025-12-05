@@ -1,0 +1,132 @@
+{
+  "reportMetadata": {
+    "title": "Cashera Capital Risk Model Report",
+    "version": "4.0",
+    "generatedDate": "2024-02-09",
+    "reportingPeriod": "January - February 2024",
+    "modelType": "Advanced Portfolio Risk Assessment"
+  },
+  "portfolioSummary": {
+    "currentValue": 1112000,
+    "initialValue": 1000000,
+    "totalReturn": 0.112,
+    "totalReturnPercent": "11.2%",
+    "periodDays": 30
+  },
+  "riskMetrics": {
+    "valueAtRisk": {
+      "var95": 56000,
+      "var95Percent": "5.03%",
+      "var99": 80000,
+      "var99Percent": "7.19%",
+      "description": "VaR represents the maximum expected loss at a given confidence level over a specific time horizon"
+    },
+    "expectedShortfall": {
+      "es95": 87000,
+      "es95Percent": "7.82%",
+      "description": "Expected Shortfall (CVaR) represents the expected loss given that the VaR threshold has been exceeded"
+    },
+    "volatility": {
+      "current": 0.26,
+      "average": 0.205,
+      "trend": "increasing",
+      "description": "Portfolio volatility measures the dispersion of returns, indicating overall portfolio risk"
+    },
+    "beta": {
+      "current": 0.88,
+      "average": 0.99,
+      "trend": "decreasing",
+      "description": "Beta measures systematic risk relative to the market. Beta < 1 indicates lower volatility than the market"
+    },
+    "sharpeRatio": {
+      "current": 1.00,
+      "average": 1.11,
+      "rating": "Good",
+      "description": "Sharpe Ratio measures risk-adjusted returns. Higher values indicate better risk-adjusted performance"
+    },
+    "maxDrawdown": {
+      "current": -0.20,
+      "currentPercent": "-20%",
+      "description": "Maximum Drawdown represents the largest peak-to-trough decline in portfolio value"
+    }
+  },
+  "riskScores": {
+    "liquidity": {
+      "score": 10.0,
+      "rating": "Excellent",
+      "description": "High liquidity score indicates strong ability to convert assets to cash without significant price impact"
+    },
+    "creditRisk": {
+      "score": 5.3,
+      "rating": "Low Risk",
+      "description": "Low credit risk score indicates minimal exposure to counterparty default risk"
+    }
+  },
+  "recommendations": [
+    {
+      "category": "Volatility Management",
+      "priority": "Medium",
+      "recommendation": "Portfolio volatility has increased from 15% to 26% over the period. Consider rebalancing to reduce exposure to high-volatility assets.",
+      "impact": "Could reduce VaR by 10-15%"
+    },
+    {
+      "category": "Diversification",
+      "priority": "Low",
+      "recommendation": "Beta has decreased to 0.88, indicating reduced market correlation. Current diversification appears adequate.",
+      "impact": "Maintain current strategy"
+    },
+    {
+      "category": "Risk-Adjusted Returns",
+      "priority": "Medium",
+      "recommendation": "Sharpe Ratio has declined from 1.20 to 1.00. Review high-risk positions to improve risk-adjusted returns.",
+      "impact": "Target Sharpe Ratio above 1.15"
+    },
+    {
+      "category": "Drawdown Protection",
+      "priority": "High",
+      "recommendation": "Maximum drawdown has reached -20%. Implement stop-loss strategies and consider hedging positions.",
+      "impact": "Limit further drawdown to -15%"
+    }
+  ],
+  "modelComponents": {
+    "description": "The Cashera Risk Model V4.0 integrates multiple risk assessment methodologies",
+    "components": [
+      {
+        "name": "Value at Risk (VaR)",
+        "method": "Historical Simulation with 250-day lookback",
+        "purpose": "Quantify potential losses at 95% and 99% confidence levels"
+      },
+      {
+        "name": "Expected Shortfall (CVaR)",
+        "method": "Conditional VaR calculation",
+        "purpose": "Measure tail risk beyond VaR threshold"
+      },
+      {
+        "name": "Volatility Analysis",
+        "method": "GARCH(1,1) model with rolling windows",
+        "purpose": "Forecast future volatility and identify regime changes"
+      },
+      {
+        "name": "Beta Calculation",
+        "method": "Regression against market benchmark",
+        "purpose": "Assess systematic risk exposure"
+      },
+      {
+        "name": "Sharpe Ratio",
+        "method": "Excess return divided by standard deviation",
+        "purpose": "Evaluate risk-adjusted performance"
+      },
+      {
+        "name": "Liquidity Risk",
+        "method": "Bid-ask spread analysis and trading volume assessment",
+        "purpose": "Measure ease of position liquidation"
+      },
+      {
+        "name": "Credit Risk",
+        "method": "Credit spread analysis and rating-based scoring",
+        "purpose": "Assess counterparty default risk"
+      }
+    ]
+  },
+  "disclaimer": "This risk model is provided for informational purposes only. Past performance does not guarantee future results. All investments carry risk, including potential loss of principal. Consult with qualified financial professionals before making investment decisions."
+}
